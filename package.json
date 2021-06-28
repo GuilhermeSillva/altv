@@ -1,0 +1,28 @@
+{
+    "name": "altv",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "https://github.com/GuilhermeSillva/altv.git",
+    "author": "Guilherme Silva <guilhermesillva.grs@gmail.com>",
+    "license": "MIT",
+    "scripts":{
+        "clean": "rimraf ./resources",
+        "watch": "nodemon",
+        "start": "yarn clean && yarn build && yarn copy-resource && ./altv-server.exe",
+        "build": "cd ./src && tsc",
+        "copy-resource": "cp ./src/core/resource.cfg ./resources/core",
+        "install-altv": "altv-pkg d release"
+    },
+    "devDependencies": {
+        "@altv/types-client": "^1.7.3",
+        "@altv/types-natives": "^1.4.2",
+        "@altv/types-server": "^1.9.3",
+        "@altv/types-shared": "^1.0.1",
+        "@altv/types-webview": "^1.0.2",
+        "@types/node": "^15.12.5",
+        "altv-pkg": "^1.1.0",
+        "nodemon": "^2.0.7",
+        "rimraf": "^3.0.2",
+        "typescript": "^4.3.4"
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "typeRoots": ["./node_modules/@types", "./node_modules/@altv"],
+        "target": "es6",
+        "module": "commonjs",
+        "allowJs": true,
+        "declaration": true,
+        "noImplicitAny": true,
+        "removeComments": true,
+        "experimentalDecorators": true,
+        "rootDir": "./src",
+        "outDir": "./resources",
+        "sourceMap": false,
+        "listFiles": false,
+        "newLine": "LF",
+        "noEmitOnError": true
+    },
+    "include": ["./src/**/*.ts"],
+    "exclude": ["./node_modules", "**/*.spec.ts", "resources", "**/*.json"]
+}
